@@ -12,33 +12,24 @@ print("This game is pretty simple. I'm going to pick a number between 1 and 20. 
 "Let's get started.")
 try_count = 0
 number_to_guess = pick_number()
+game_on = True
 
 ## Play
-print(f"The number to guess is {number_to_guess}")
+print(f"The number to guess is {number_to_guess}\n")
 
-def bump_try_count():
-    try_count +=1
-    pass
-
-for tries in try_count(0,6):
-#    try_count = 0
-    guess = int()
-    try:
+while game_on:
+    for tries in range(0,6):
         guess = int(input("I'm thinking of a number between 1 and 20. Take a guess. \n"))
-        break
-    except ValueError:
-        print("You need to enter a valid integer. Try again.")
-    if guess > number_to_guess:
-#        bump_try_count()
-        print(f"Try number {try_count}. Too high! \n > ")
-    elif guess < number_to_guess:
-#        bump_try_count()
-        print(f"Try number {try_count}. Too low! \n > ")
-    else:
-        print(f"That's it! The number is {number_to_guess}. You got it in {try_count} tries.")
-
-
-    
-
-
-
+        if guess > number_to_guess:
+            try_count += 1
+            print(f"Try number {try_count}. Too high! \n > ")
+        elif guess < number_to_guess:
+            try_count += 1
+            print(f"Try number {try_count}. Too low! \n > ")
+        elif guess == number_to_guess:
+            try_count += 1
+            print(f"That's it! The number is {number_to_guess}. You got it in {try_count} tries.")
+            break
+    game_on = False
+    if try_count >= 6:
+        print(f"Sorry! The number I was thinking of was {number_to_guess}.")
