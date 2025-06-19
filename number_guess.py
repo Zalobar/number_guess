@@ -33,3 +33,4 @@ while game_on:
     game_on = False
     if try_count >= 6:
         print(f"Sorry! The number I was thinking of was {number_to_guess}.")
+# adding a comment
