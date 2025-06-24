@@ -6,7 +6,7 @@ def pick_number():
 # Initialize
 player_name = input("Hello! What's your name? ")
 print(f"Hi {player_name}!")
-print("I'm going to pick a number between 1 and 20. \n" \
+print("This is a number-guessing game. I'm going to pick a number between 1 and 20. \n" \
 "Try to guess the number. You'll have up to 6 tries. \n" \
 "If you guess within 6 tries, you'll win. If you don't guess within 6 tries, I'll win. \n" 
 "Let's get started.")
