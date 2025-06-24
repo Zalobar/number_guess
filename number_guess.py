@@ -6,9 +6,9 @@ def pick_number():
 # Initialize
 player_name = input("Hello! What's your name? ")
 print(f"Hi {player_name}!")
-print("This game is pretty simple. I'm going to pick a number between 1 and 20. \n" \
-"Your job is to guess the number. You have up to 6 tries. \n" \
-"If you guess within 6 tries, you win. If you don't get it within 6 tries, I win. \n" 
+print("I'm going to pick a number between 1 and 20. \n" \
+"Try to guess the number. You'll have up to 6 tries. \n" \
+"If you guess within 6 tries, you'll win. If you don't guess within 6 tries, I'll win. \n" 
 "Let's get started.")
 try_count = 0
 number_to_guess = pick_number()
@@ -33,4 +33,3 @@ while game_on:
     game_on = False
     if try_count >= 6:
         print(f"Sorry! The number I was thinking of was {number_to_guess}.")
-# adding a comment
